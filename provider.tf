@@ -1,7 +1,7 @@
 provider "aws" {}
 
-terraform {
-  backend "local" {
-    path = "/var/lib/jenkins/terraform.tfstate"
-  }
-}
+//terraform {
+// backend "local" {
+//   path = "/var/lib/jenkins/terraform.tfstate"
+//  }
+// }

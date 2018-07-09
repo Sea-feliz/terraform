@@ -1,0 +1,6 @@
+#! /bin/bash
+
+terraform destroy -target=module.infra -auto-approve
+terraform destroy -target=module.network -auto-approve
+terraform apply -target=module.network -auto-approve
+terraform apply -target=module.infra -auto-approve
