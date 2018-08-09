@@ -1,14 +1,11 @@
 module "network" {
-  source  = "./Modules/network"
-  project_name = "${var.project_name}"
+  source = "./module/network/"
 }
 
 module "infra" {
-  source  = "./Modules/infra"
-  //project_name = "${var.project_name}"
+  source = "./module/infra/"
   subnet1_id = "${module.network.subnet1_id}"
   subnet2_id = "${module.network.subnet2_id}"
-  vpc = "${module.network.vpc}"
+  security_group1 = "${module.network.security_group1}"
+  security_group2 = "${module.network.security_group2}"
 }
-
-
